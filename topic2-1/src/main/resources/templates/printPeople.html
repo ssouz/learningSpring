@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+  <head>
+  	<title>Table 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=dev	ice-width, initial-scale=1, shrink-to-fit=no">
+	  <style>
+		  *{
+			  background-color: black;
+			  padding-bottom: 1rem;
+			  padding-right: 1rem;
+
+
+			  align-content: center;
+		  }
+		  th,tr,td,h2{
+			  color: white;
+			  height: 2rem;
+		  }
+	  </style>
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Some people</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table">
+						  <thead class="thead-primary">
+						    <tr>
+						      <th>id</th>
+						      <th>Name</th>
+						      <th>Age</th>
+						      <th>Weight</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr th:each = "p : ${people}">
+						      <th th:text="${p.id}" scope="row"></th>
+						      <td th:text="${p.name}"></td>
+						      <td th:text="${p.age}"></td>
+						      <td th:text="${p.weight}"></td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	</body>
+</html>
+
