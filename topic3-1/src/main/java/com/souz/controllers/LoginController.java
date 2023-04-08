@@ -26,7 +26,7 @@ public class LoginController {
 
         if (bindingResult.hasErrors()){
             model.addAttribute("loginModel", loginModel);
-            log.info("error while trying to login with Username: {} and Password: {}",loginModel.getUsername(),loginModel.getPassword());
+            log.error("error while trying to login with Username: {} and Password: {}",loginModel.getUsername(),loginModel.getPassword());
             return "LoginForm";
         }
         log.info("successful login with Username: {} and Password: {}",loginModel.getUsername(),loginModel.getPassword());
