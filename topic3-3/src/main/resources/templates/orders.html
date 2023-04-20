@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/defaultLayout}" xmlns:layout="http://www.w3.org/1999/xhtml" lang="en">
+
+ <!--insert title
+     insert table for orders
+     add to defaultLayout-->
+    <div layout:fragment="content">
+     <h2 th:text="${title}"></h2>
+     <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">OrderNo</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="order : ${orders}">
+            <td th:text="${order.id}">Mark</td>
+            <td th:text="${order.orderNo}">Otto</td>
+            <td th:text="${order.productName}">Otto</td>
+            <td th:text="${order.price}">Otto</td>
+
+            <td th:text="${order.quantity}">Otto</td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
